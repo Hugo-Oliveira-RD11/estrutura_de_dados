@@ -16,13 +16,18 @@ int main(){
     Lista *minha = criar();
     int number=0;
 
-    for (int i=0; i<10; i++) {
-        number= (rand()/1000000);
+    for (int i=1,k=11; i<10;k++, i++) {
+        number= k;
         inserir_Final(minha, number);
-        consulta_Position(minha, i);
     }
+
     PrintLista(minha);
 
+    for (int i=10; i<20; i++) {
+        inserir_Ordenada(minha, rand()/100000000);
+    }
+
+    PrintLista(minha);
 
     return 1;
 }

@@ -63,12 +63,11 @@ int inserir_Final(Lista* li, int var){
     }
 
     Lista *aux = li;
-    while (aux->proximo) {
+    while (aux->proximo != NULL) {
         aux = aux->proximo;
     }
     aux->proximo = no;
 
-    free(aux);
     return 1;
 }
 
@@ -186,6 +185,7 @@ int consulta_Position(Lista* li, int position){ // tem como fazer o retorno por 
         aux = aux->proximo;
         i++;
      }
+
     if(i != position) return -1;
 
     return aux->number;
