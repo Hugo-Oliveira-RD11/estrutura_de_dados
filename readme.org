@@ -1,0 +1,54 @@
+#+TITLE: Estruturas de Dados — Task List
+#+AUTHOR: Hugo Oliveira
+#+OPTIONS: toc:t num:nil
+
+* Objetivo
+Este repositório tem como finalidade o treinamento prático na implementação
+de estruturas de dados e algoritmos clássicos, organizados por módulos. Pretendo ir fazendo nas linguagens que tenho interesse (c, c#, talvez c++ e java).
+
+O checklist abaixo indica o que já foi implementado e o que ainda está pendente.
+
+* Listas
+- [ ] Lista Estática (Array List)
+- [ ] Lista Encadeada Simples (Singly Linked List)
+- [ ] Lista Duplamente Encadeada (Doubly Linked List)
+- [ ] Lista Circular (Circular Linked List)
+
+* Pilha (Stack)
+- [ ] Pilha com Vetor
+- [ ] Pilha com Lista Encadeada
+
+* Fila (Queue)
+- [ ] Fila com Vetor
+- [ ] Fila Circular
+- [ ] Fila com Lista Encadeada
+
+* Árvores (Trees)
+- [ ] Árvore Binária
+- [ ] Árvore Binária de Busca (Binary Search Tree - BST)
+- [ ] Percurso em Pré-Ordem
+- [ ] Percurso em Em-Ordem
+- [ ] Percurso em Pós-Ordem
+- [ ] Percurso em Largura (Breadth-First Search - BFS)
+- [ ] Percurso em Profundidade (Depth-First Search - DFS)
+
+* Tabelas Hash (Hash Table)
+- [ ] Hash Table com Endereçamento Aberto
+- [ ] Hash Table com Encadeamento Separado
+- [ ] Funções Hash
+- [ ] Tratamento de Colisões
+
+* Algoritmos Relacionados
+- [ ] Busca Linear
+- [ ] Busca Binária
+- [ ] Ordenação por Bolha (Bubble Sort)
+- [ ] Ordenação por Inserção (Insertion Sort)
+- [ ] Ordenação por Seleção (Selection Sort)
+- [ ] Merge Sort
+- [ ] Quick Sort
+
+* Melhorias Futuras
+- [ ] Análise de Complexidade (Big O)
+- [ ] Testes unitários
+- [ ] Documentação por módulo
+- [ ] Exemplos de uso
