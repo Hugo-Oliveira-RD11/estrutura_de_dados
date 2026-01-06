@@ -145,3 +145,25 @@ int remove_item(List *li, int dado) {
   return 1;
   
 }
+
+// subtrai a position pois e posicao "humana" e nao computacionalmente
+int search_position(List *li, int position, int* dado_return) {
+  if (!_isExist(li) || isNull(li) || li->qtd <= position || position <= 0)
+    return 0;
+
+  *dado_return = li->dado[position-1];
+  return 1;
+}
+int search(List *li, int dado, int* dado_return){
+  if (!_isExist(li) || isNull(li))
+    return 0;
+
+  for (int i = 0; i < li->qtd; i++) {
+    if (li->dado[i] == dado) {
+      *dado_return = li->dado[i];
+      return 1;
+    }
+  }
+  
+  return 0;
+}
