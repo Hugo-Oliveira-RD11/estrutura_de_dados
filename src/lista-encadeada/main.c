@@ -7,15 +7,15 @@ struct No {
 };
 typedef struct No no;
 
-Lista* create() {
-  Lista *li = (Lista*) malloc(sizeof(Lista));
+List* create() {
+  List *li = (List*) malloc(sizeof(List));
 
   (*li)->next = NULL;
 
   return li;
 }
 
-void dell(Lista *li) {
+void dell(List *li) {
   if (!isNull(li))
     return;
 
@@ -29,7 +29,7 @@ void dell(Lista *li) {
   free(li);
 }
 
-int size(Lista *li) {
+int size(List *li) {
   if (!isNull(li))
     return 0;
 
@@ -43,15 +43,15 @@ int size(Lista *li) {
   return total;
 }
 
-int isFull(Lista *li) {
+int isFull(List *li) {
   return 0;
 }
 
-int isNull(Lista *li) {
+int isNull(List *li) {
   return (*li == NULL);
 }
 
-int insert_begin(Lista *li, int dado) {
+int insert_begin(List *li, int dado) {
   if (li == NULL)
     return 0;
 
@@ -65,7 +65,7 @@ int insert_begin(Lista *li, int dado) {
   return 1;
 }
 
-int insert_middle(Lista *li, int dado, int position) {
+int insert_middle(List *li, int dado, int position) {
   if (li == NULL)
     return 0;
   int i=0;
@@ -86,7 +86,7 @@ int insert_middle(Lista *li, int dado, int position) {
   return 1;
 }
 
-int insert_final(Lista *li, int dado) {
+int insert_final(List *li, int dado) {
   if (li == NULL)
     return 0;
 
@@ -105,7 +105,7 @@ int insert_final(Lista *li, int dado) {
   return 1;
 }
 
-int remove_begin(Lista *li) {
+int remove_begin(List *li) {
   if (li == NULL || isNull(li))
     return 0;
 
@@ -117,7 +117,7 @@ int remove_begin(Lista *li) {
   return 1;
 }
 
-int remove_middle(Lista *li, int position) {
+int remove_middle(List *li, int position) {
   if (li == NULL || isNull(li))
     return 0;
 
@@ -140,7 +140,7 @@ int remove_middle(Lista *li, int position) {
   return 1;
 }
 
-int remove_final(Lista *li) {
+int remove_final(List *li) {
   if (li == NULL || isNull(li))
     return 0;
 
