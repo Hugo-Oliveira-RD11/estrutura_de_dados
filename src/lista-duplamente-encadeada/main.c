@@ -82,7 +82,7 @@ int insert_middle(List *li, int dado, int position) {
 
   int i=0;
   no *aux = *li, *paux;
-  while (aux != NULL || i < position) {
+  while (aux != NULL && i < position) {
     paux = aux;
     aux = aux->next;
     i++;
