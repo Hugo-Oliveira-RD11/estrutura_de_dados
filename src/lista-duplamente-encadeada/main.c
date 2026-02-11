@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 
+#define null NULL
 
 struct No {
   int dado;
@@ -113,7 +114,59 @@ int insert_final(List *li, int dado) {
   return 0;
 }
 
-int remove_begin(List *li);
-int remove_middle(List *li, int position);
-int remove_item(List* li, int dado);
-int remove_final(List *li);
+int remove_begin(List *li) {
+  if (*li == null)
+    return -1;
+
+  no *aux = *li;
+  *li = aux->next;
+  free(aux);
+  return 0;
+}
+
+int remove_middle(List *li, int position) {
+  if (*li == null)
+    return -1;
+
+  no *aux = *li;
+  int i = 0;
+  while (aux->next != null && i < position) {
+    aux = aux->next;
+    i++;
+  }
+  if (aux != null || i != position)
+    return -1;
+  free(aux);
+
+  return 0;
+}
+int remove_item(List *li, int dado) {
+  if (*li == null)
+    return -1;
+
+  no *aux = *li;
+  while (aux->next != null && aux->dado != dado) {
+    aux = aux->next;
+  }
+  if (aux != null || aux->dado != dado)
+    return -1;
+
+  free(aux);
+  return 0;
+  
+}
+int remove_final(List *li) {
+  if (*li == null)
+    return -1;
+
+  no *aux = *li;
+  while (aux->next != null) {
+    aux = aux->next;
+  }
+  if (aux->next != null)
+    return -1;
+
+  free(aux);
+  return 0;
+  
+}
